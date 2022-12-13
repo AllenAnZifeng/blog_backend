@@ -76,7 +76,7 @@ let post_comment_middleware = async (req: Request, res: Response, next: NextFunc
                 content: comment,
                 authorName: username,
                 blogID: blogID,
-                time: Date.now(),
+                time: JSON.stringify(Date.now()),
             }
         })
         console.log("Comment Successful!")

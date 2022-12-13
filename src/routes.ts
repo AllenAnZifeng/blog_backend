@@ -10,8 +10,9 @@ let routes = (app:Express) => {
 
     app.get('/api/comment/:blogId', fetch_comment_middleware)
 
-    app.post('/data', (req: Request, res: Response) => {
-        console.log(req.body)
+    app.get('/data', (req: Request, res: Response) => {
+        console.log("data")
+        return res.status(200).json({message: "data"})
     })
 }
 
