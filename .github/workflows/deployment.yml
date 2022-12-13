@@ -3,7 +3,7 @@ name: deploy-to-home-server
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 
 jobs:
