@@ -40,8 +40,11 @@ jobs:
           port: ${{ secrets.PORT }}
           script_stop: true
           script: |
-            whoami
-            ls -lsrt
-            pwd
+            cd /home/allen/Documents/blog.zifengallen.me
+            cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S su
+            sudo su
+            cat /home/allen/Documents/blog.zifengallen.me/dockerPwd.txt | docker login --username imballen --password-stdin
+            
+            
 
 

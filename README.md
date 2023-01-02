@@ -6,8 +6,10 @@ prisma migrate dev --name [init]
 Docker
 ```bash
 docker build . --no-cache -t imballen/node-web-app
-docker run -p 4000:4000 -d imballen/node-web-app
+docker volume create credential-vol
+docker run -p 4000:4000 -d  --name devtest --mount source=data_volume,target=/usr/src/app/config imballen/node-web-app:latest
 ```
+
 
 Github Actions --- Build and push to Docker Hub
 
