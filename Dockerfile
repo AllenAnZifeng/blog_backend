@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 
-RUN npx prisma migrate dev --name init --schema=/usr/src/app/prisma/schema.prisma
+# RUN npx prisma migrate dev --name init --schema=/usr/src/app/prisma/schema.prisma
 # If you are building your code for production
 # RUN npm ci --only=production
 
