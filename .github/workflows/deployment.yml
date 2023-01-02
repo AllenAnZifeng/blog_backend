@@ -38,7 +38,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script:
+          script_stop: true
+          script: |
             whoami
             ls -lsrt
             pwd
