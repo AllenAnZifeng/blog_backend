@@ -24,4 +24,4 @@ EXPOSE 4000
 ENV NODE_ENV=production
 
 
-CMD [ "npm", "run","dev" ]
+# CMD [ "npm", "run","dev" ] # cannot start without .env, configured in CICD
