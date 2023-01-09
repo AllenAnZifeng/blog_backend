@@ -42,13 +42,12 @@ jobs:
           script: |
             cd /home/allen/Documents/blog.zifengallen.me
             cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S su
-            sudo su
             cat /home/allen/Documents/blog.zifengallen.me/dockerPwd.txt | sudo docker login --username imballen --password-stdin
 
-            sudo docker stop devtest
-            sudo docker rm devtest
-            sudo docker pull imballen/node-web-app:latest
-            sudo docker run -p 4000:4000 -di  --name devtest --mount source=data_volume,target=/usr/src/app/config imballen/node-web-app:latest
+            cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S docker stop devtest
+            cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S docker rm devtest
+            cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S docker pull imballen/node-web-app:latest
+            cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S docker run -p 4000:4000 -di  --name devtest --mount source=data_volume,target=/usr/src/app/config imballen/node-web-app:latest
             
          
             
