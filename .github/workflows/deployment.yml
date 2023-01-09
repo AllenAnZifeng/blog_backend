@@ -50,7 +50,7 @@ jobs:
             sudo docker pull imballen/node-web-app:latest
             sudo docker run -p 4000:4000 -di  --name devtest --mount source=data_volume,target=/usr/src/app/config imballen/node-web-app:latest
             
-            sudo docker exec devtest /usr/src/app/setup.sh
+            cat /home/allen/Documents/blog.zifengallen.me/sudoPwd.txt | sudo -S docker exec devtest /usr/src/app/setup.sh
             
 
 
