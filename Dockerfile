@@ -23,5 +23,6 @@ RUN ["chmod", "+x", "/usr/src/app/setup.sh"]
 EXPOSE 4000
 ENV NODE_ENV=production
 
+CMD ["/usr/src/app/setup.sh"]
 
 # CMD [ "npm", "run","dev" ] # cannot start without .env, configured in CICD
