@@ -12,7 +12,7 @@ RUN npm install
 
 # Bundle app source
 COPY . .
-
+RUN ["chmod", "+x", "/usr/src/app/setup.sh"]
 
 # RUN npx prisma migrate dev --name init --schema=/usr/src/app/prisma/schema.prisma
 # If you are building your code for production
